@@ -6,26 +6,11 @@ using namespace std;
 char findGrade(double g)
 {
 	char x;
-	if (g > 90)
-	{
-		x = 'A';
-	}
-	else if (g <= 90 && g > 75)
-	{
-		x =  'B';
-	}
-	else if (g <= 75 && g > 60)
-	{
-		x =  'C';
-	}
-	else if (g <= 60 && g > 45)
-	{
-		x =  'D';
-	}
-	else if (g <= 45)
-	{
-		x =  'F';
-	}
+	if (g > 90) x = 'A';
+	else if (g <= 90 && g > 75) x =  'B';
+	else if (g <= 75 && g > 60) x =  'C';
+	else if (g <= 60 && g > 45) x =  'D';
+	else if (g <= 45) x =  'F';
 	return x;
 }
 
@@ -41,8 +26,10 @@ int main(){
 	while(i < N){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
+		getline(cin, name[i]);
 		//[Missing Code 2] Get name of the i-th students that may include whitespace.
 		cout << "Score of student " << i+1 << ": ";
+		cin >> score[i];
 		//[Missing Code 3] Get score of the i-th students.
 		i++;
 	}
