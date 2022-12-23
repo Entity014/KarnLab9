@@ -1,40 +1,53 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
   char rank;
+  int i = 0;
+  string text[5] = {"You have received Super Ultra Rare Unit!!!\n", "You have received 5 gems.\n", "You have received 1 gems.\n", "You have received 2000 coins.\n", "You have received very KAK items.\n"};
   cout << "Input your rank: ";
   cin >> rank;
   if (rank == 'S')
   {
-    cout << "You have received Super Ultra Rare Unit!!!\n";
-    cout << "You have received 5 gems.\n";
-    cout << "You have received 1 gems.\n";
-    cout << "You have received 2000 coins.\n";
-    cout << "You have received very KAK items.\n";
+    while(i < 5)
+    {
+      cout << text[i];
+      i++;
+    }
   }
   else if (rank == 'A')
   {
-    cout << "You have received 5 gems.\n";
-    cout << "You have received 1 gems.\n";
-    cout << "You have received 2000 coins.\n";
-    cout << "You have received very KAK items.\n";
+    while(i < 4)
+    {
+      cout << text[i+1];
+      i++;
+    }
   }
   else if (rank == 'B')
   {
-    cout << "You have received 1 gems.\n";
-    cout << "You have received 2000 coins.\n";
-    cout << "You have received very KAK items.\n";
+    while(i < 3)
+    {
+      cout << text[i+2];
+      i++;
+    }
   }
   else if (rank == 'C')
   {
-    cout << "You have received 2000 coins.\n";
-    cout << "You have received very KAK items.\n";
+    while(i < 2)
+    {
+      cout << text[i+3];
+      i++;
+    }
   }
   else if (rank == 'D')
   {
-    cout << "You have received very KAK items.\n";
+    while(i < 1)
+    {
+      cout << text[i+4];
+      i++;
+    }
   }
   return 0;
 }
