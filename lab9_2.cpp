@@ -3,7 +3,31 @@
 #include<string>
 using namespace std;
 
-//[Missing Code 1] Write definition of the function findGrade() here.
+char findGrade(double g)
+{
+	char x;
+	if (g > 90)
+	{
+		x = 'A';
+	}
+	else if (g <= 90 && g > 75)
+	{
+		x =  'B';
+	}
+	else if (g <= 75 && g > 60)
+	{
+		x =  'C';
+	}
+	else if (g <= 60 && g > 45)
+	{
+		x =  'D';
+	}
+	else if (g <= 45)
+	{
+		x =  'F';
+	}
+	return x;
+}
 
 int main(){
 	//Input the number of students
